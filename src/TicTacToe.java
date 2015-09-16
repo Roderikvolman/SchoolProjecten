@@ -14,23 +14,17 @@ public class TicTacToe {
         Scanner sc = new Scanner(System.in);
         String[][] field = new String[3][3];
 
+       /* for(int i = 0; i < field[1].length; i++){// Rick Algorithme
+            for (int j = 0; j < field[0].length; j++){
+                field[j][i] = (char)((i * 3) + (j + 1));
+            }
+        }*/
 
-
-        for(int i = 0; i <= 8; i ++){
+        for(int i = 0; i <= 8; i ++){// Roderik algorithme
            int hor = i%3;
            int ver = i/3;
             field[hor][ver] = "" + (i + 1);
         }
-
-//        field[0][0] = '1';
-//        field[1][0] = '2';
-//        field[2][0] = '3';
-//        field[0][1] = '4';
-//        field[1][1] = '5';
-//        field[2][1] = '6';
-//        field[0][2] = '7';
-//        field[1][2] = '8';
-//        field[2][2] = '9';
 
         System.out.println("| " + field[0][0] + " | " + field[1][0] + " | " + field[2][0] + " |");
         System.out.println("--------------");
