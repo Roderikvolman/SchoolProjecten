@@ -14,13 +14,13 @@ public class TicTacToe {
         Scanner sc = new Scanner(System.in);
         String[][] field = new String[3][3];
 
-       /* for(int i = 0; i < field[1].length; i++){// Rick Algorithme
+       /* for(int i = 0; i < field[1].length; i++){// Rick Algoritme
             for (int j = 0; j < field[0].length; j++){
                 field[j][i] = (char)((i * 3) + (j + 1));
             }
         }*/
 
-        for(int i = 0; i <= 8; i ++){// Roderik algorithme
+        for(int i = 0; i <= 8; i ++){// Roderik algoritme
            int hor = i%3;
            int ver = i/3;
             field[hor][ver] = "" + (i + 1);
