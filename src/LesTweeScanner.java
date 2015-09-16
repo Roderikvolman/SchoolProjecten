@@ -2,7 +2,6 @@
  * Created by Roderik on 02-09-15.
  */
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 
 import java.util.Scanner;
 

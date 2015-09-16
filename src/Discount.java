@@ -16,13 +16,16 @@ public class Discount {
         double count = 0;
         double discount = 0;
 
+        System.out.println("Please enter the price");
+        count = sc.nextInt();
 
         while (count != -1) {
-            System.out.println("Please enter the price");
-            count = sc.nextInt();
+
             System.out.println("Please enter your discount%");
             discount = sc.nextInt();
             System.out.println("Your discount is " + discount + "%. Your new price is €" + count * ((100 - discount) / 100));
+
+
 
         }
 
