@@ -10,7 +10,7 @@ import java.awt.event.ActionEvent;
 public class XOButton extends JButton implements ActionListener {
 
     ImageIcon X,O;
-    byte value= 0;
+    int value= 0;
 
     public XOButton()  {
         X = new ImageIcon(this.getClass().getResource("X.png"));
