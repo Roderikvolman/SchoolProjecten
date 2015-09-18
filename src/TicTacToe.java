@@ -26,7 +26,7 @@ public class TicTacToe {
 //
 //        if (menu == 1) {
 //
-//        }
+//        }//henk
 
         int R = 3;
         int O = 2;
