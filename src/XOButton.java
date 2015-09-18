@@ -32,7 +32,8 @@ public class XOButton extends JButton implements ActionListener {
         }
 
         new TTTPanel().setPlayer();
-        System.out.println(cubicle);
+        new TTTPanel().defineClick(cubicle);
+        //System.out.println(cubicle);
 
     }
 }
