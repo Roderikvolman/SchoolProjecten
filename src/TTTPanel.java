@@ -12,6 +12,7 @@ public class TTTPanel extends JFrame{
     XOButton buttons[] = new XOButton[9];
 
     private static int player = 0;
+    private String[][] field;
 
     public static void main (String args []){
 
@@ -33,7 +34,11 @@ public class TTTPanel extends JFrame{
         for (int i=0;i<9;i++){
             buttons[i]= new XOButton(i);
             p.add(buttons[i]);
+            int hor = i % 3;
+            int ver = i / 3;
+            field[hor][ver] = "" + (i + 1);
         }
+
         add(p);
 
         setVisible(true);
