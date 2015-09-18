@@ -11,13 +11,21 @@ public class TTTPanel extends JFrame{
     JPanel p = new JPanel();
     XOButton buttons[] = new XOButton[9];
 
-    public static void main (String args []){
-        new TTTPanel();
+    private static int player = 0;
 
+    public static void main (String args []){
+
+        new TTTPanel().henk();
     }
 
     public TTTPanel(){
         super("TicTacToe");
+    }
+
+
+
+    public void henk(){
+
         setSize(800,800);
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -29,5 +37,18 @@ public class TTTPanel extends JFrame{
         add(p);
 
         setVisible(true);
+    }
+
+    public int playerTurn(){
+        return player;
+    }
+
+    public void setPlayer(){
+        if(player == 0){
+            player = 1;
+        }else
+            player = 0;
+        System.out.println(player);
+
     }
 }

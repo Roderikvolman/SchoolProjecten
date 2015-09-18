@@ -19,19 +19,18 @@ public class XOButton extends JButton implements ActionListener {
     }//
 
     public void actionPerformed(ActionEvent e) {
-        value++;
-        value%=3;
-        switch (value){
+        int play;
+        play = new TTTPanel().playerTurn();
+        switch (play){
             case 0:
-                setIcon(null);
-                break;
-            case 1:
                 setIcon(X);
                 break;
-            case 2:
+            case 1:
                 setIcon(O);
                 break;
         }
+
+        new TTTPanel().setPlayer();
 
     }
 }
