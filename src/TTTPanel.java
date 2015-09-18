@@ -31,7 +31,7 @@ public class TTTPanel extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         p.setLayout(new GridLayout(3,3));
         for (int i=0;i<9;i++){
-            buttons[i]= new XOButton();
+            buttons[i]= new XOButton(i);
             p.add(buttons[i]);
         }
         add(p);
@@ -48,7 +48,5 @@ public class TTTPanel extends JFrame{
             player = 1;
         }else
             player = 0;
-        System.out.println(player);
-
     }
 }

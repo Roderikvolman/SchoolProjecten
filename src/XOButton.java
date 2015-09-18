@@ -10,13 +10,14 @@ import java.awt.event.ActionEvent;
 public class XOButton extends JButton implements ActionListener {
 
     ImageIcon X,O;
-    int value= 0;
+    private int cubicle;
 
-    public XOButton()  {
+    public XOButton(int i)  {
         X = new ImageIcon(this.getClass().getResource("X.png"));
         O = new ImageIcon(this.getClass().getResource("O.png"));
         this.addActionListener(this);
-    }//
+        cubicle = i;
+    }
 
     public void actionPerformed(ActionEvent e) {
         int play;
@@ -31,6 +32,7 @@ public class XOButton extends JButton implements ActionListener {
         }
 
         new TTTPanel().setPlayer();
+        System.out.println(cubicle);
 
     }
 }
