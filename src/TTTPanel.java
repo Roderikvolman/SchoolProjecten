@@ -2,8 +2,7 @@
  * Created by Roderik on 17-09-15.
  */
 
-import javax.swing.JPanel;
-import javax.swing.JFrame;
+import javax.swing.*;
 import java.awt.*;
 
 public class TTTPanel extends JFrame {
@@ -12,7 +11,7 @@ public class TTTPanel extends JFrame {
     XOButton buttons[] = new XOButton[9];
 
     private static int player = 0;
-    private String[][] field = new String[3][3];
+    private static String[][] field = new String[3][3];
 
     public static void main(String args[]) {
 
@@ -36,6 +35,7 @@ public class TTTPanel extends JFrame {
             int hor = i % 3;
             int ver = i / 3;
             field[hor][ver] = "" + (i + 1);
+
         }
 
         add(p);
@@ -55,20 +55,18 @@ public class TTTPanel extends JFrame {
     }
 
     public void defineClick(int i) {
-        //while (!(checkrow(1, 1, field) || checkrow(1, 3, field) || checkrow(1, 4, field) || checkrow(3, 2, field) || checkrow(4, 1, field) || checkrow(7, 1, field) || checkrow(3, 3, field) || checkrow(2, 3, field))) {
-            if (player == 0) {
-                field[(i) % 3][(i) / 3] = "x";
-            } else {
-                field[(i) % 3][(i) / 3] = "o";
-            }
-            //
-        //}
-        if ((checkrow(1, 1, field) || checkrow(1, 3, field) || checkrow(1, 4, field) || checkrow(3, 2, field) || checkrow(4, 1, field) || checkrow(7, 1, field) || checkrow(3, 3, field) || checkrow(2, 3, field))){
-            System.out.println("Winneeer: ");
+        if (player == 0) {
+            field[(i) % 3][(i) / 3] = "x";
+        } else {
+            field[(i) % 3][(i) / 3] = "o";
+        }
+        if ((checkrow(1, 1, field) || checkrow(1, 3, field) || checkrow(1, 4, field) || checkrow(3, 2, field) || checkrow(4, 1, field) || checkrow(7, 1, field) || checkrow(3, 3, field) || checkrow(2, 3, field))) {
+            System.out.println("Winneeer! ");
         }
 
 
     }
+
     public boolean checkrow(int id, int steps, String[][] field) {
         int count;
 
