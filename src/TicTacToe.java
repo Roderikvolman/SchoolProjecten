@@ -28,9 +28,9 @@ public class TicTacToe {
 //
 //        }//henk
 
-        int R = 3;
-        int O = 3;
-
+        int R = 12;
+        int O = 12;
+        String lijn = "----";
         String[][] field = new String[R][O];
 
 
@@ -38,16 +38,49 @@ public class TicTacToe {
             int hor = i % R;
             int ver = i / R;
             field[hor][ver] = "" + (i + 1);
+
+            if (i + 1 < 10) {
+                System.out.print("| " + field[hor][ver] + " ");
+
+                if ((i + 1) % R == 0) {
+                    System.out.println("");
+                    for (int l = 0; l < R; l++) {
+                        System.out.print(lijn);
+                    }
+                    System.out.println("");
+
+                }
+            } else if (i + 1 < 100) {
+
+                System.out.print("| " + field[hor][ver] + "");
+
+                if ((i + 1) % R == 0) {
+                    System.out.println("");
+                    for (int l = 0; l < R; l++) {
+                        System.out.print(lijn);
+                    }
+                    System.out.println("");
+                }
+            } else {
+                System.out.print("|" + field[hor][ver] + "");
+
+                if ((i + 1) % R == 0) {
+                    System.out.println("");
+                    for (int l = 0; l < R; l++) {
+                        System.out.print(lijn);
+                    }
+                    System.out.println("");
+
+                }
+            }
         }
 
-        System.out.println();
 
-
-        System.out.println("| " + field[0][0] + " | " + field[1][0] + " | " + field[2][0] + " |");
-        System.out.println("--------------");
-        System.out.println("| " + field[0][1] + " | " + field[1][1] + " | " + field[2][1] + " |");
-        System.out.println("--------------");
-        System.out.println("| " + field[0][2] + " | " + field[1][2] + " | " + field[2][2] + " |");
+//        System.out.println("| " + field[0][0] + " | " + field[1][0] + " | " + field[2][0] + " |");
+//        System.out.println("--------------");
+//        System.out.println("| " + field[0][1] + " | " + field[1][1] + " | " + field[2][1] + " |");
+//        System.out.println("--------------");
+//        System.out.println("| " + field[0][2] + " | " + field[1][2] + " | " + field[2][2] + " |");
 
         String one = "Player 1";
         String two = "Player 2";
@@ -77,8 +110,8 @@ public class TicTacToe {
 
         System.out.println("Winneeer: ");
 
-
     }
+
 
     public boolean checkrow(int id, int steps, String[][] field) {
         int count;
@@ -92,7 +125,6 @@ public class TicTacToe {
         }
         return true;
     }
-
 
 
 }
