@@ -1,5 +1,7 @@
 package Minesweeper;
 
+import Minesweeper.Game.Frame;
+
 /**
  * Created by Rick on 25-9-2015.
  */
@@ -10,7 +12,8 @@ public class Main {
     }
 
     public void run(){
-
+        new Frame().initiate(9,9,10);
+        new Frame().panel();
     }
 
 }
