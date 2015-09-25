@@ -26,10 +26,16 @@ public class TicTacToe {
 //
 //        if (menu == 1) {
 //
-//        }//henk
+//        }//
 
-        int R = 12;
-        int O = 12;
+        int R = 0;
+        int O = 0;
+
+        System.out.println("Hoeveel vakjes in de breedte moet het veld zijn?");
+        R = sc.nextInt();
+        System.out.println("Hoeveel vakjes in de hoogte moet het veld zijn?");
+        O = sc.nextInt();
+
         String lijn = "----";
         String[][] field = new String[R][O];
 
@@ -76,11 +82,7 @@ public class TicTacToe {
         }
 
 
-//        System.out.println("| " + field[0][0] + " | " + field[1][0] + " | " + field[2][0] + " |");
-//        System.out.println("--------------");
-//        System.out.println("| " + field[0][1] + " | " + field[1][1] + " | " + field[2][1] + " |");
-//        System.out.println("--------------");
-//        System.out.println("| " + field[0][2] + " | " + field[1][2] + " | " + field[2][2] + " |");
+
 
         String one = "Player 1";
         String two = "Player 2";
