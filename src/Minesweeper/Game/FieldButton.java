@@ -31,14 +31,17 @@ public class FieldButton extends JButton implements ActionListener {
     }
 //TODO: Game over functie
     public void actionPerformed(ActionEvent e) {
-        reveal();
-        //System.out.println("1 " + type);
-        if (type == "bomb"){
-            System.out.println("Game Over");
-        }else if (type == "" + 0){
+        if(type == "" + 0) {
             new Frame().openArea(hor, ver);
+            System.out.println("hello?!?");
+        }else if (type != "bomb"){
+            reveal();
+        }else if (type == "bomb"){
+            System.out.println("Game Over");
+        }else if (type == "0"){
+            new Frame().openArea(hor, ver);
+            System.out.println("dit is 0 tussen haakjes");
         }
-        //System.out.println("2 " + type);
 
     }
 
@@ -47,6 +50,12 @@ public class FieldButton extends JButton implements ActionListener {
 //            type = "";
 //        }else
             type = x;
+        if (type == "bomb"){
+            //System.out.println("pas op!");
+        }else if (type == "0"){
+           // System.out.println("harry");
+        }
+        //System.out.println(type);
         //this.setText(type);
     }
 
