@@ -59,7 +59,7 @@ public class Frame {
         panel.setVisible(true);
     }
 
-    public String checkField(int x, int y){
+    public String checkField(int x, int y){//TODO Verander in return arraylist, voor hoeveel bommen, gebruik arrayList.size, voor hoeveel nullen, voeg arraylist samen
         if (buttons[x][y].getType() == "bomb")
             return "bomb";
         else {
