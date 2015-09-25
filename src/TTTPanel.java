@@ -70,7 +70,6 @@ public class TTTPanel extends JFrame {
     public boolean checkrow(int id, int steps, String[][] field) {
         int count;
 
-
         for (int i = 1; i < 3; i++) {
             count = (id - 1) + (steps * i);
             if (!field[count % 3][count / 3].equals(field[(id - 1) % 3][(id - 1) / 3])) {
