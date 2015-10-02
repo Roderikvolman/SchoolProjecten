@@ -19,29 +19,32 @@ public class hallo {
         System.out.println("Hee hoeveel getallen wil je hebben?");
         aantal = sc.nextInt();
 
-        int[] hello = new int[aantal];
+        int[] arrayoOne = new int[aantal];
 
         for (int i = 0; i < aantal; i++) {
-            hello[i] = i + 1;
-            System.out.println(hello[i]);
+            arrayoOne[i] = i + 1;
+            System.out.println(arrayoOne[i]);
 
         }
         if (aantal % 2 == 0) {
-            int[] equalHello = new int[aantal - 2];
+            int[] arrayTwo = new int[aantal - 2];
+            int oud;
+            int nieuw = 0;
 
-
-            int p = 0;
-            for (int i = 0; i < aantal - 2; i++) {
-                if (i == (aantal-1)/2){
-                    p = p + 2;
+            for (oud = 0; oud < aantal; oud++) {
+                if (oud == (aantal - 1) / 2) {
+                    oud = oud + 2;
+                    arrayTwo[nieuw] = arrayoOne[oud];
+                    System.out.println(arrayTwo[nieuw]);
+                    nieuw++;
+                } else {
+                    arrayTwo[nieuw] = arrayoOne[oud];
+                    System.out.println(arrayTwo[nieuw]);
+                    nieuw++;
                 }
-                p++;
-                equalHello[i] = hello[p];
-                System.out.println(equalHello[i]);
             }
         }
     }
-
 }
 
 
