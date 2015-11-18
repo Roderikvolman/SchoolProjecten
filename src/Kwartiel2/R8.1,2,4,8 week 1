@@ -1,0 +1,23 @@
+
+R8.1
+What is encapsulation and why is it usefull?
+Het is variabelen public en private maken. Op deze manier voorkom je dat buiten de classe om, waarin een var private is, de var onbedoeld wordt veranderd.
+
+R8.2
+What values are returned by the calls:
+
+    reg1.addItem(3.25):
+    reg1.addItem(1.95):
+    reg2.addItem(3.25):
+    reg2.clear():
+
+    reg1.getCount():        5.20
+    reg1.getTotal():        5.20
+    reg2.getCount():        3.25
+    reg2.getTotal();        0
+
+R8.4
+What is the public interface of a class? How does it differ from the implementation of a class?
+
+R.8.8
+What is mutator method, and how does it differ from a static method?
