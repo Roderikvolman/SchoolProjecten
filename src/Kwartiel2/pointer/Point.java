@@ -32,7 +32,7 @@ public class Point {
 
     public double distanceToPoint(Point other){
 
-        double distance = Math.sqrt(Math.pow((other.getX()-getX()),(other.getY()-getY())));
+        double distance = Math.sqrt(((x-other.getX())*(x-other.getX()))+((y-other.getY())*(y-other.getY())));
         return distance;
     }
 }
