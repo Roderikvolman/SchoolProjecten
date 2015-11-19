@@ -31,10 +31,8 @@ public class Point {
     }
 
     public double distanceToPoint(Point other){
-        //@Jaimy deze is nog niet goed
-        double distanceA =  Math.sqrt((y*y)+(x*x));
-        double distanceB = Math.sqrt((other.getY()*other.getY()) + (other.getX()*other.getX()));
-        double distance = distanceA + distanceB;
+
+        double distance = Math.sqrt(Math.pow((other.getX()-getX()),(other.getY()-getY())));
         return distance;
     }
 }
