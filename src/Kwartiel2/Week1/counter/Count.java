@@ -1,4 +1,4 @@
-package Kwartiel2.counter;
+package Kwartiel2.Week1.counter;
 
 /**
  * Created by Roderik on 18-11-15.

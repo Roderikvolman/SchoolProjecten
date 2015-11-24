@@ -1,4 +1,4 @@
-package Kwartiel2.pointer;
+package Kwartiel2.Week1.pointer;
 
 
 /**

@@ -1,4 +1,4 @@
-package Kwartiel2.counter;
+package Kwartiel2.Week1.counter;
 
 import java.util.Scanner;
 
