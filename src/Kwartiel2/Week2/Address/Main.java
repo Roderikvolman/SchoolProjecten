@@ -6,10 +6,10 @@ package Kwartiel2.Week2.Address;
 public class Main {
     public static void main(String[] args) {
 
-    Address addressWithNumber = new Address(1,"Deventerweg",true,"Laren","Gelderland",12);
-            addressWithNumber.setAppartmentNumber(12);
+    Address addressWithoutNumber = new Address(1,"Deventerweg","Laren","Gelderland",12);
+        Address addressWithNumber = new Address(1,"Deventerweg","Laren","Gelderland",12,12);
 
-        System.out.println(addressWithNumber);
+
 
     }
 

@@ -15,7 +15,7 @@ public class Address {
     private String state;
     private int postalCode; //Only numbers in american postal code.
 
-    public Address(int houseNumber, String street,Boolean withAppartmentNumber, String city, String state, int postalCode) {
+    public Address(int houseNumber, String street, String city, String state, int postalCode) {
         this.housenumber = houseNumber;
         this.street = street;
         this.city = city;
@@ -23,8 +23,10 @@ public class Address {
         this.postalCode = postalCode;
     }
 
-    public void setAppartmentNumber(int appartmentNumber) {
-        this.appartmentNumber = appartmentNumber;
+    public Address(int houseNumber, String street, String city, String state, int postalCode, int appartmentNumber) {
+        this(houseNumber,street,city,state,postalCode);
+        this.appartmentNumber =appartmentNumber;
     }
+
 
 }
